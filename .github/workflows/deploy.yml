@@ -25,6 +25,13 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v2
+      - name: Clear node_modules cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
       - name: Install, build, and upload your site output
         uses: withastro/action@v0
         # with:
