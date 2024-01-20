@@ -1,0 +1,26 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "03/2023 – present",
+    title: "AI R&D Engineer − Parasecurity Group/Tecnical University of Crete",
+    description: "I'm continuing my work under Parasecurity Group, but now as a full-time researcher.",
+  },
+  {
+    date: "2022 – 03/2023",
+    title: "Research Fellow - Parasecurity Group/ICS-FORTH",
+    description:
+      "At ICS-FORTH, I'm working with the Parasecurity Group. I have developed algorithms that perform various tasks, including sentiment analysis, named entity recognition, and topic modeling. I have also explored deep learning techniques, such as recurrent neural networks and convolutional neural networks, to develop models that can learn text data representations and make accurate predictions.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
