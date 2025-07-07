@@ -59,13 +59,13 @@ const { description, title } = Astro.props
     <!-- Entity relationships for AI -->
     <meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
 
-    <!-- Advanced Person + Website Schema with Knowledge Panel optimization -->
+    <!-- FIXED: Advanced Person + Website Schema (No Validation Errors) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": ["Person", "Researcher"],
+            "@type": "Person",
             "@id": "https://jlamprou.github.io/#ioannis-lamprou",
             "name": "Ioannis Lamprou",
             "alternateName": ["John Lamprou", "Giannis Lamprou", "I. Lamprou", "J. Lamprou"],
@@ -73,7 +73,7 @@ const { description, title } = Astro.props
             "familyName": "Lamprou",
             "gender": "Male",
             "nationality": "Greek",
-            "jobTitle": ["AI R&D Engineer", "Research Fellow", "MSc Candidate"],
+            "jobTitle": "AI R&D Engineer",
             "description": "AI R&D Engineer and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
             "url": "https://jlamprou.github.io",
             "mainEntityOfPage": "https://jlamprou.github.io",
@@ -86,53 +86,36 @@ const { description, title } = Astro.props
             },
             "email": "glamprou26@protonmail.com",
             "knowsAbout": [
-              {
-                "@type": "DefinedTerm",
-                "name": "Large Language Models",
-                "description": "Advanced neural network architectures for natural language understanding"
-              },
-              {
-                "@type": "DefinedTerm", 
-                "name": "Natural Language Processing",
-                "description": "Computational techniques for analyzing and understanding human language"
-              },
-              {
-                "@type": "DefinedTerm",
-                "name": "Machine Learning", 
-                "description": "Algorithms that improve automatically through experience"
-              },
+              "Large Language Models",
+              "Natural Language Processing", 
+              "Machine Learning", 
               "AI Research",
               "Python Programming",
               "Deep Learning",
               "Neural Networks",
               "Cybersecurity",
               "Bot Detection",
-              "Social Media Analysis",
-              "Mixture-of-Experts",
-              "Retentive Networks"
+              "Social Media Analysis"
             ],
             "hasOccupation": {
               "@type": "Occupation",
               "name": "AI Research Engineer",
               "description": "Developing Large Language Models and AI for cybersecurity applications",
-              "occupationLocation": {
-                "@type": "Place",
-                "name": "Greece"
-              },
-              "skills": ["Machine Learning", "Natural Language Processing", "Python", "Deep Learning", "Large Language Models", "PyTorch", "Transformers"]
+              "occupationLocation": "Greece",
+              "skills": "Machine Learning, Natural Language Processing, Python, Deep Learning, Large Language Models, PyTorch, Transformers"
             },
             "worksFor": {
               "@type": "Organization",
               "@id": "https://parasecurity.edu.gr",
               "name": "Parasecurity Group",
               "parentOrganization": {
-                "@type": "University",
+                "@type": "CollegeOrUniversity",
                 "name": "Technical University of Crete",
                 "location": "Greece"
               }
             },
             "alumniOf": {
-              "@type": "University",
+              "@type": "CollegeOrUniversity",
               "name": "Technical University of Crete",
               "location": "Greece"
             },
@@ -142,11 +125,7 @@ const { description, title } = Astro.props
             },
             "workLocation": {
               "@type": "Place",
-              "name": "Technical University of Crete",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "Greece"
-              }
+              "name": "Greece"
             },
             "memberOf": [
               {
@@ -155,16 +134,8 @@ const { description, title } = Astro.props
               },
               {
                 "@type": "Organization", 
-                "name": "Technical University of Crete Community"
+                "name": "Technical University of Crete"
               }
-            ],
-            "expertise": [
-              "Mixture-of-Experts architectures",
-              "Retentive Networks", 
-              "Social media bot detection",
-              "Crisis communication analysis",
-              "Sentiment analysis",
-              "Cybersecurity applications"
             ],
             "sameAs": [
               "https://linkedin.com/in/ioannis-lamprou-478b1b223/",
@@ -180,25 +151,6 @@ const { description, title } = Astro.props
             "publisher": {
               "@id": "https://jlamprou.github.io/#ioannis-lamprou"
             }
-          },
-          {
-            "@type": "ProfessionalService",
-            "name": "Ioannis Lamprou - AI Research Services",
-            "description": "AI and Machine Learning research expertise in Large Language Models, Natural Language Processing, and Cybersecurity applications",
-            "provider": {
-              "@id": "https://jlamprou.github.io/#ioannis-lamprou"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "Greece"
-            },
-            "serviceType": [
-              "AI Research",
-              "Machine Learning", 
-              "Natural Language Processing",
-              "Large Language Models",
-              "Cybersecurity AI"
-            ]
           }
         ]
       }
@@ -223,7 +175,7 @@ const { description, title } = Astro.props
             "name": "What does Ioannis Lamprou research?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ioannis Lamprou's research focuses on Large Language Models (LLMs), Natural Language Processing, AI for cybersecurity, Twitter bot detection, social media analysis, and Mixture-of-Experts architectures. His current thesis work involves Retentive Networks for malicious code detection."
+              "text": "Ioannis Lamprou's research focuses on Large Language Models (LLMs), Natural Language Processing, AI for cybersecurity, Twitter bot detection, social media analysis, and advanced neural network architectures. His current thesis work involves Retentive Networks for malicious code detection."
             }
           },
           {

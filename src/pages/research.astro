@@ -6,19 +6,19 @@ import Layout from "@/layouts/Layout.astro"
   title="Research Network - Ioannis Lamprou"
   description="Research collaborations and academic network of Ioannis (John) Lamprou, AI researcher at Technical University of Crete"
 >
-  <main class="px-4 max-w-4xl mx-auto py-12" itemscope itemtype="https://schema.org/ResearchProject">
+  <main class="px-4 max-w-4xl mx-auto py-12">
     <h1 class="text-3xl font-bold mb-8">Research Network & Collaborations</h1>
     
     <section class="space-y-8">
       
       <!-- Academic Affiliations -->
-      <div itemscope itemtype="https://schema.org/Organization">
+      <div>
         <h2 class="text-2xl font-semibold mb-4">Academic Affiliations</h2>
         <div class="space-y-2">
           <p><strong>Ioannis Lamprou</strong> is affiliated with:</p>
           <ul class="list-disc ml-6 space-y-1">
-            <li><a href="https://www.tuc.gr" class="text-blue-600" itemprop="url">Technical University of Crete (TUC)</a></li>
-            <li><a href="https://parasecurity.edu.gr" class="text-blue-600" itemprop="url">Parasecurity Group</a></li>
+            <li><a href="https://www.tuc.gr" class="text-blue-600">Technical University of Crete (TUC)</a></li>
+            <li><a href="https://parasecurity.edu.gr" class="text-blue-600">Parasecurity Group</a></li>
             <li>Telecommunication Systems Research Institute (T.S.I.)</li>
             <li>Institute of Computer Science, FORTH (ICS-FORTH)</li>
           </ul>
@@ -100,7 +100,7 @@ import Layout from "@/layouts/Layout.astro"
 
     </section>
 
-    <!-- Research Project Schema -->
+    <!-- FIXED: Research Project Schema (No Validation Errors) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -113,14 +113,13 @@ import Layout from "@/layouts/Layout.astro"
         "alternateName": "John Lamprou",
         "affiliation": [
           {
-            "@type": "Organization",
+            "@type": "CollegeOrUniversity",
             "name": "Technical University of Crete",
             "location": "Greece"
           },
           {
             "@type": "Organization", 
-            "name": "Parasecurity Group",
-            "parentOrganization": "Technical University of Crete"
+            "name": "Parasecurity Group"
           }
         ]
       },
