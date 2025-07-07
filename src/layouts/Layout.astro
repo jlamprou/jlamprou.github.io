@@ -14,14 +14,26 @@ const { description, title } = Astro.props
 
 <!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
-    <meta name="keywords" content="Ioannis Lamprou, John Lamprou, AI Engineer, Machine Learning, NLP, Research, Parasecurity, TUC, Crete" />
+    <meta name="keywords" content="Ioannis Lamprou, John Lamprou, AI Engineer, Machine Learning, NLP, Research, artificial intelligence researcher, deep learning engineer, neural network developer, Greece" />
     <meta name="author" content="Ioannis Lamprou" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Geographic targeting -->
+    <meta name="geo.region" content="GR" />
+    <meta name="geo.placename" content="Greece" />
+    
+    <!-- Performance optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//github.com">
+    <link rel="dns-prefetch" href="//linkedin.com">
+    <link rel="dns-prefetch" href="//parasecurity.edu.gr">
+    <link rel="preload" href="/me.png" as="image" type="image/png">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -29,6 +41,10 @@ const { description, title } = Astro.props
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://jlamprou.github.io/me.png" />
+    <meta property="article:author" content="Ioannis Lamprou" />
+    <meta property="profile:first_name" content="Ioannis" />
+    <meta property="profile:last_name" content="Lamprou" />
+    <meta property="profile:username" content="jlamprou" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -40,32 +56,220 @@ const { description, title } = Astro.props
     <!-- Canonical URL -->
     <link rel="canonical" href="https://jlamprou.github.io/" />
 
-    <!-- Structured Data -->
+    <!-- Entity relationships for AI -->
+    <meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
+
+    <!-- Advanced Person + Website Schema with Knowledge Panel optimization -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ioannis Lamprou",
-        "alternateName": ["John Lamprou"],
-        "jobTitle": "AI R&D Engineer",
-        "description": "AI R&D Engineer and MSc Candidate specializing in Machine Learning, NLP and AI",
-        "url": "https://jlamprou.github.io",
-        "image": "https://jlamprou.github.io/me.png",
-        "email": "glamprou26@protonmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Heraklion",
-          "addressRegion": "Crete",
-          "addressCountry": "Greece"
-        },
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Technical University of Crete",
-          "url": "https://parasecurity.edu.gr"
-        },
-        "sameAs": [
-          "https://linkedin.com/in/ioannis-lamprou-478b1b223/",
-          "https://github.com/jlamprou"
+        "@graph": [
+          {
+            "@type": ["Person", "Researcher"],
+            "@id": "https://jlamprou.github.io/#ioannis-lamprou",
+            "name": "Ioannis Lamprou",
+            "alternateName": ["John Lamprou", "Giannis Lamprou", "I. Lamprou", "J. Lamprou"],
+            "givenName": "Ioannis",
+            "familyName": "Lamprou",
+            "gender": "Male",
+            "nationality": "Greek",
+            "jobTitle": ["AI R&D Engineer", "Research Fellow", "MSc Candidate"],
+            "description": "AI R&D Engineer and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
+            "url": "https://jlamprou.github.io",
+            "mainEntityOfPage": "https://jlamprou.github.io",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://jlamprou.github.io/me.png",
+              "caption": "Ioannis (John) Lamprou - AI R&D Engineer",
+              "width": 400,
+              "height": 400
+            },
+            "email": "glamprou26@protonmail.com",
+            "knowsAbout": [
+              {
+                "@type": "DefinedTerm",
+                "name": "Large Language Models",
+                "description": "Advanced neural network architectures for natural language understanding"
+              },
+              {
+                "@type": "DefinedTerm", 
+                "name": "Natural Language Processing",
+                "description": "Computational techniques for analyzing and understanding human language"
+              },
+              {
+                "@type": "DefinedTerm",
+                "name": "Machine Learning", 
+                "description": "Algorithms that improve automatically through experience"
+              },
+              "AI Research",
+              "Python Programming",
+              "Deep Learning",
+              "Neural Networks",
+              "Cybersecurity",
+              "Bot Detection",
+              "Social Media Analysis",
+              "Mixture-of-Experts",
+              "Retentive Networks"
+            ],
+            "hasOccupation": {
+              "@type": "Occupation",
+              "name": "AI Research Engineer",
+              "description": "Developing Large Language Models and AI for cybersecurity applications",
+              "occupationLocation": {
+                "@type": "Place",
+                "name": "Greece"
+              },
+              "skills": ["Machine Learning", "Natural Language Processing", "Python", "Deep Learning", "Large Language Models", "PyTorch", "Transformers"]
+            },
+            "worksFor": {
+              "@type": "Organization",
+              "@id": "https://parasecurity.edu.gr",
+              "name": "Parasecurity Group",
+              "parentOrganization": {
+                "@type": "University",
+                "name": "Technical University of Crete",
+                "location": "Greece"
+              }
+            },
+            "alumniOf": {
+              "@type": "University",
+              "name": "Technical University of Crete",
+              "location": "Greece"
+            },
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Greece"
+            },
+            "workLocation": {
+              "@type": "Place",
+              "name": "Technical University of Crete",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Greece"
+              }
+            },
+            "memberOf": [
+              {
+                "@type": "Organization",
+                "name": "Parasecurity Research Group"
+              },
+              {
+                "@type": "Organization", 
+                "name": "Technical University of Crete Community"
+              }
+            ],
+            "expertise": [
+              "Mixture-of-Experts architectures",
+              "Retentive Networks", 
+              "Social media bot detection",
+              "Crisis communication analysis",
+              "Sentiment analysis",
+              "Cybersecurity applications"
+            ],
+            "sameAs": [
+              "https://linkedin.com/in/ioannis-lamprou-478b1b223/",
+              "https://github.com/jlamprou"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://jlamprou.github.io/#website",
+            "url": "https://jlamprou.github.io",
+            "name": "Ioannis (John) Lamprou - AI R&D Engineer Portfolio",
+            "description": "Personal website and portfolio of Ioannis (John) Lamprou, AI R&D Engineer specializing in Machine Learning and NLP at Technical University of Crete",
+            "publisher": {
+              "@id": "https://jlamprou.github.io/#ioannis-lamprou"
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "name": "Ioannis Lamprou - AI Research Services",
+            "description": "AI and Machine Learning research expertise in Large Language Models, Natural Language Processing, and Cybersecurity applications",
+            "provider": {
+              "@id": "https://jlamprou.github.io/#ioannis-lamprou"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Greece"
+            },
+            "serviceType": [
+              "AI Research",
+              "Machine Learning", 
+              "Natural Language Processing",
+              "Large Language Models",
+              "Cybersecurity AI"
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- FAQ Schema for Voice Search -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Who is Ioannis Lamprou?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ioannis Lamprou (also known as John Lamprou) is an AI R&D Engineer and MSc Candidate at Technical University of Crete in Greece, specializing in Machine Learning, Natural Language Processing, and Large Language Models. He works at the Parasecurity Group and has published research on social media analysis, bot detection, and AI for cybersecurity."
+            }
+          },
+          {
+            "@type": "Question", 
+            "name": "What does Ioannis Lamprou research?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ioannis Lamprou's research focuses on Large Language Models (LLMs), Natural Language Processing, AI for cybersecurity, Twitter bot detection, social media analysis, and Mixture-of-Experts architectures. His current thesis work involves Retentive Networks for malicious code detection."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does John Lamprou work?",
+            "acceptedAnswer": {
+              "@type": "Answer", 
+              "text": "John Lamprou works as an AI R&D Engineer at the Parasecurity Group, which is part of the Technical University of Crete in Greece. He previously worked as a Research Fellow at ICS-FORTH."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What programming languages does Ioannis Lamprou use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ioannis Lamprou is proficient in Python programming, PyTorch, Transformers, and various machine learning frameworks. He specializes in deep learning, neural networks, and AI model development using modern ML libraries."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ioannis Lamprou",
+            "item": "https://jlamprou.github.io"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2, 
+            "name": "AI Research Engineer",
+            "item": "https://jlamprou.github.io#experiencia"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Technical University of Crete", 
+            "item": "https://jlamprou.github.io#sobre-mi"
+          }
         ]
       }
     </script>

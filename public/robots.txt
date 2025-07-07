@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# Priority pages
+Allow: /research/
+
+# Sitemaps
 Sitemap: https://jlamprou.github.io/sitemap.xml
+
+# Humans
+# More about this site and researcher
+# https://jlamprou.github.io/humans.txt

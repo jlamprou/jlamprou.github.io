@@ -1,0 +1,53 @@
+# The humans responsible & technology colophon
+
+# TEAM
+
+AI R&D Engineer: Ioannis Lamprou (John Lamprou)
+Contact: glamprou26@protonmail.com
+LinkedIn: https://linkedin.com/in/ioannis-lamprou-478b1b223/
+GitHub: https://github.com/jlamprou
+Location: Greece
+
+# ORGANIZATION
+
+Organization: Technical University of Crete
+Research Group: Parasecurity Group
+Website: https://parasecurity.edu.gr
+Location: Greece
+
+# RESEARCH FOCUS
+
+Large Language Models (LLMs)
+Natural Language Processing
+Machine Learning
+AI for Cybersecurity
+Social Media Analysis
+Bot Detection
+Deep Learning
+Neural Networks
+Mixture-of-Experts architectures
+Retentive Networks
+
+# CURRENT PROJECTS
+
+MSc Thesis: Retentive Networks for malicious code detection
+LLM Research: Efficient Mixture-of-Experts architectures
+EU Horizon Projects: Cybersecurity applications
+Research Publications: Social media analysis and bot detection
+
+# TECHNOLOGY
+
+Framework: Astro
+Styling: Tailwind CSS
+Hosting: GitHub Pages
+Analytics: Google Search Console
+Performance: Core Web Vitals optimized
+
+# KEYWORDS
+
+Ioannis Lamprou, John Lamprou, AI Engineer, Machine Learning, 
+Natural Language Processing, Large Language Models, Greece,
+Technical University Crete, Parasecurity Group, Cybersecurity,
+Social Media Analysis, Bot Detection, Deep Learning, Python
+
+Last update: 2025/07/07
