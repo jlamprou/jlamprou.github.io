@@ -13,13 +13,63 @@ const { description, title } = Astro.props
 ---
 
 <!doctype html>
-<html lang="es">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
+    <meta name="keywords" content="Ioannis Lamprou, John Lamprou, AI Engineer, Machine Learning, NLP, Research, Parasecurity, TUC, Crete" />
+    <meta name="author" content="Ioannis Lamprou" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jlamprou.github.io/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://jlamprou.github.io/me.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jlamprou.github.io/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://jlamprou.github.io/me.png" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jlamprou.github.io/" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ioannis Lamprou",
+        "alternateName": ["John Lamprou"],
+        "jobTitle": "AI R&D Engineer",
+        "description": "AI R&D Engineer and MSc Candidate specializing in Machine Learning, NLP and AI",
+        "url": "https://jlamprou.github.io",
+        "image": "https://jlamprou.github.io/me.png",
+        "email": "glamprou26@protonmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Heraklion",
+          "addressRegion": "Crete",
+          "addressCountry": "Greece"
+        },
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Technical University of Crete",
+          "url": "https://parasecurity.edu.gr"
+        },
+        "sameAs": [
+          "https://linkedin.com/in/ioannis-lamprou-478b1b223/",
+          "https://github.com/jlamprou"
+        ]
+      }
+    </script>
+
     <title>{title}</title>
   </head>
 
