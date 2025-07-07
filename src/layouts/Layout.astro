@@ -53,9 +53,24 @@ const { description, title } = Astro.props
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="https://jlamprou.github.io/me.png" />
 
-    <!-- Canonical URL -->
+    <!-- Canonical URL - Always use non-www -->
     <link rel="canonical" href="https://jlamprou.github.io/" />
-
+        
+    <!-- Tell search engines to prefer non-www -->
+    <meta property="og:url" content="https://jlamprou.github.io/" />
+    <meta property="twitter:url" content="https://jlamprou.github.io/" />
+    <!-- Mobile touch icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/me.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/me.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/me.png">
+    <meta name="msapplication-TileColor" content="#1f2937">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Mobile optimization -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Ioannis Lamprou")>
     <!-- Entity relationships for AI -->
     <meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
 
@@ -73,8 +88,8 @@ const { description, title } = Astro.props
         "familyName": "Lamprou",
         "gender": "Male",
         "nationality": "Greek",
-        "jobTitle": "AI R&D Engineer",
-        "description": "AI R&D Engineer and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
+        "jobTitle": "AI researcher",
+        "description": "AI researcher and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
         "url": "https://jlamprou.github.io",
         "mainEntityOfPage": {
           "@type": "WebPage",
@@ -84,7 +99,7 @@ const { description, title } = Astro.props
         "image": {
           "@type": "ImageObject",
           "url": "https://jlamprou.github.io/me.png",
-          "caption": "Ioannis (John) Lamprou - AI R&D Engineer",
+          "caption": "Ioannis (John) Lamprou - AI researcher",
           "width": 400,
           "height": 400
         },
@@ -103,7 +118,7 @@ const { description, title } = Astro.props
         ],
         "hasOccupation": {
           "@type": "Occupation",
-          "name": "AI Research Engineer",
+          "name": "AI research engineer",
           "mainEntityOfPage": {
             "@type": "WebPage",
             "lastReviewed": "2025-07-07T12:00:00+00:00"
@@ -173,7 +188,7 @@ const { description, title } = Astro.props
         "@id": "https://jlamprou.github.io/#website",
         "url": "https://jlamprou.github.io",
         "name": "Ioannis (John) Lamprou - AI R&D Engineer Portfolio",
-        "description": "Personal website and portfolio of Ioannis (John) Lamprou, AI R&D Engineer specializing in Machine Learning and NLP at Technical University of Crete",
+        "description": "Personal website and portfolio of Ioannis (John) Lamprou, AI researcher specializing in Machine Learning and NLP at Technical University of Crete",
         "publisher": {
           "@id": "https://jlamprou.github.io/#ioannis-lamprou"
         }
@@ -193,7 +208,7 @@ const { description, title } = Astro.props
             "name": "Who is Ioannis Lamprou?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ioannis Lamprou (also known as John Lamprou) is an AI R&D Engineer and MSc Candidate at Technical University of Crete in Greece, specializing in Machine Learning, Natural Language Processing, and Large Language Models. He works at the Parasecurity Group and has published research on social media analysis, bot detection, and AI for cybersecurity."
+              "text": "Ioannis Lamprou (also known as John Lamprou) is an AI researcher and MSc Candidate at Technical University of Crete in Greece, specializing in Machine Learning, Natural Language Processing, and Large Language Models. He works at the Parasecurity Group and has published research on social media analysis, bot detection, and AI for cybersecurity."
             }
           },
           {
@@ -209,7 +224,7 @@ const { description, title } = Astro.props
             "name": "Where does John Lamprou work?",
             "acceptedAnswer": {
               "@type": "Answer", 
-              "text": "John Lamprou works as an AI R&D Engineer at the Parasecurity Group, which is part of the Technical University of Crete in Greece. He previously worked as a Research Fellow at ICS-FORTH."
+              "text": "John Lamprou works as an AI researcher at the Parasecurity Group, which is part of the Technical University of Crete in Greece. He previously worked as a Research Fellow at ICS-FORTH."
             }
           },
           {

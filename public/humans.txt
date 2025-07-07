@@ -2,7 +2,7 @@
 
 # TEAM
 
-AI R&D Engineer: Ioannis Lamprou (John Lamprou)
+AI researcher: Ioannis Lamprou (John Lamprou)
 Contact: glamprou26@protonmail.com
 LinkedIn: https://linkedin.com/in/ioannis-lamprou-478b1b223/
 GitHub: https://github.com/jlamprou
