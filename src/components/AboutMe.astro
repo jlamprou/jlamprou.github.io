@@ -16,17 +16,17 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
     class="[&>p]:mb-4 [&>p>strong]:text-yellow-400 [&>p>strong]:font-semibold text-pretty order-2 md:order-1"
   >
   <p>
-    I am <strong itemprop="name">Ioannis Lamprou</strong> (also known as <strong>John Lamprou</strong>), an <strong>AI researcher</strong> and MSc Candidate at ECE TUC. As an <strong>AI researcher</strong> at
+    I am <strong itemprop="name">Ioannis Lamprou</strong> (also known as <span class="font-semibold text-yellow-400">John Lamprou</span>), an <strong>AI researcher</strong> and MSc Candidate at ECE TUC. At the
     <a href="https://www.tuc.gr/" class="text-blue-600 hover:underline">Technical University of Crete</a>, I'm part of the <a href="https://parasecurity.edu.gr" class="text-blue-600 hover:underline" title="Parasecurity Group research">Parasecurity Group</a>.
   </p>
 
   <p>
-    Passionate and independent at heart, with a zest for pushing the boundaries of <strong>Large Language Models (LLMs)</strong>. My <strong>portfolio</strong> showcases a journey marked by a relentless quest to reimagine and refine the architectures of <strong>LLMs</strong>, ensuring they are not just groundbreaking in theory but also efficient and scalable in the real world.
-    At the core of my work as an <strong>AI researcher</strong> is a deep commitment to <strong>innovation</strong>—whether it's enhancing model efficiency, reducing computational demands, or translating complex research into user-friendly applications.
+    Passionate and independent at heart, with a zest for pushing the boundaries of <strong>Large Language Models (LLMs)</strong>. My <span class="font-semibold">portfolio</span> showcases a journey marked by a relentless quest to reimagine and refine the architectures of LLMs, ensuring they are not just groundbreaking in theory but also efficient and scalable in the real world.
+    At the core of my work is a deep commitment to <strong>innovation</strong>—whether it's enhancing model efficiency, reducing computational demands, or translating complex research into user-friendly applications.
   </p>
 
   <p>
-    Beyond research, I bring a unique perspective as both a <strong>Pythonista</strong> and <strong>Linux enthusiast</strong>, combining theoretical knowledge with practical implementation skills. My approach to <strong>artificial intelligence research</strong> emphasizes reproducible science and open-source contributions to the <strong>machine learning</strong> community in <span itemprop="workLocation">Greece</span>. This <strong>portfolio</strong> demonstrates my expertise as an <strong>AI researcher</strong> specializing in cutting-edge <strong>AI research</strong>.
+    Beyond research, I bring a unique perspective as both a <span class="font-semibold">Pythonista</span> and <span class="font-semibold">Linux enthusiast</span>, combining theoretical knowledge with practical implementation skills. My approach to artificial intelligence research emphasizes reproducible science and open-source contributions to the <strong>machine learning</strong> community in <span itemprop="workLocation">Greece</span>. This portfolio demonstrates my expertise in cutting-edge <strong>AI research</strong>.
   </p>
   </div>
   <img src="/me.png" 
@@ -142,4 +142,33 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
   <p>Technical University of Crete = TUC = University in Greece</p>
   <p>Machine Learning = ML = Algorithms that improve automatically through experience</p>
   <p>Artificial Intelligence = AI = Computer systems that perform tasks requiring human intelligence</p>
+</section>
+
+<!-- Social Sharing Section -->
+<section class="mt-8 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg">
+  <h4 class="font-semibold mb-3">Share this profile:</h4>
+  <div class="flex gap-3 flex-wrap">
+    <a 
+      href="https://twitter.com/intent/tweet?text=Check out Ioannis Lamprou's AI research portfolio&url=https://jlamprou.github.io" 
+      target="_blank"
+      rel="noopener"
+      class="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 transition"
+    >
+      Share on Twitter
+    </a>
+    <a 
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https://jlamprou.github.io" 
+      target="_blank"
+      rel="noopener"
+      class="px-3 py-1 bg-blue-700 text-white rounded text-sm hover:bg-blue-800 transition"
+    >
+      Share on LinkedIn
+    </a>
+    <button 
+      onclick="if(navigator.share){navigator.share({title: 'Ioannis Lamprou - AI Researcher', url: 'https://jlamprou.github.io'})}else{navigator.clipboard.writeText('https://jlamprou.github.io'); alert('Link copied!')}"
+      class="px-3 py-1 bg-gray-600 text-white rounded text-sm hover:bg-gray-700 transition"
+    >
+      Share Link
+    </button>
+  </div>
 </section>
