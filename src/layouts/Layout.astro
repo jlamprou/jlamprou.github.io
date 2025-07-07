@@ -59,8 +59,7 @@ const { description, title } = Astro.props
     <!-- Entity relationships for AI -->
     <meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
 
-    <!-- FIXED: Advanced Person + Website Schema (No Validation Errors) -->
-<!-- FINAL FIXED: Person Schema (All Validation Issues Resolved) -->
+<!-- FINAL FIX: Advanced Person + Website Schema (Google Compatible) -->
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -77,7 +76,11 @@ const { description, title } = Astro.props
         "jobTitle": "AI R&D Engineer",
         "description": "AI R&D Engineer and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
         "url": "https://jlamprou.github.io",
-        "mainEntityOfPage": "https://jlamprou.github.io",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://jlamprou.github.io",
+          "lastReviewed": "2025-07-07T12:00:00+00:00"
+        },
         "image": {
           "@type": "ImageObject",
           "url": "https://jlamprou.github.io/me.png",
@@ -101,20 +104,31 @@ const { description, title } = Astro.props
         "hasOccupation": {
           "@type": "Occupation",
           "name": "AI Research Engineer",
-          "description": "Developing Large Language Models and AI for cybersecurity applications",
-          "occupationLocation": "Greece",
-          "skills": "Machine Learning, Natural Language Processing, Python, Deep Learning, Large Language Models, PyTorch, Transformers",
-          "estimatedSalary": {
-            "@type": "MonetaryAmount",
-            "currency": "EUR",
-            "value": {
-              "@type": "QuantitativeValue",
-              "minValue": 30000,
-              "maxValue": 60000,
-              "unitText": "YEAR"
-            }
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "lastReviewed": "2025-07-07T12:00:00+00:00"
           },
-          "mainEntityOfPage": "https://jlamprou.github.io"
+          "description": "Developing Large Language Models and AI for cybersecurity applications",
+          "occupationLocation": [
+            {
+              "@type": "Country",
+              "name": "Greece"
+            }
+          ],
+          "skills": "Machine Learning, Natural Language Processing, Python, Deep Learning, Large Language Models, PyTorch, Transformers",
+          "estimatedSalary": [
+            {
+              "@type": "MonetaryAmountDistribution",
+              "name": "base",
+              "currency": "EUR",
+              "duration": "P1Y",
+              "percentile10": 25000,
+              "percentile25": 35000,
+              "median": 45000,
+              "percentile75": 55000,
+              "percentile90": 65000
+            }
+          ]
         },
         "worksFor": {
           "@type": "Organization",
@@ -131,8 +145,14 @@ const { description, title } = Astro.props
           "name": "Technical University of Crete",
           "location": "Greece"
         },
-        "homeLocation": "Greece",
-        "workLocation": "Greece",
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Greece"
+        },
+        "workLocation": {
+          "@type": "Place",
+          "name": "Greece"
+        },
         "memberOf": [
           {
             "@type": "Organization",
@@ -156,8 +176,7 @@ const { description, title } = Astro.props
         "description": "Personal website and portfolio of Ioannis (John) Lamprou, AI R&D Engineer specializing in Machine Learning and NLP at Technical University of Crete",
         "publisher": {
           "@id": "https://jlamprou.github.io/#ioannis-lamprou"
-        },
-        "mainEntityOfPage": "https://jlamprou.github.io"
+        }
       }
     ]
   }
