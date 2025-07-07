@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Priority pages
-Allow: /research/
+# Preferred domain (for SEO tools)
+Host: https://jlamprou.github.io
 
 # Sitemaps
 Sitemap: https://jlamprou.github.io/sitemap.xml

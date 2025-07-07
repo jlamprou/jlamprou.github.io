@@ -53,12 +53,20 @@ const { description, title } = Astro.props
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="https://jlamprou.github.io/me.png" />
 
-    <!-- Canonical URL - Always use non-www -->
+    <!-- SEO: Indicate preferred domain version -->
     <link rel="canonical" href="https://jlamprou.github.io/" />
-        
-    <!-- Tell search engines to prefer non-www -->
     <meta property="og:url" content="https://jlamprou.github.io/" />
     <meta property="twitter:url" content="https://jlamprou.github.io/" />
+
+    <!-- Tell crawlers about domain preference -->
+    <meta name="robots" content="index, follow" />
+    <link rel="alternate" href="https://jlamprou.github.io/" hreflang="en" />
+    <!-- Additional SEO signals for redirect handling -->
+    <meta name="canonical" content="https://jlamprou.github.io/" />
+    <link rel="canonical" href="https://jlamprou.github.io/" />
+
+    <!-- Help SEO tools understand preferred URL structure -->
+    <meta property="al:web:url" content="https://jlamprou.github.io/" />
     <!-- Mobile touch icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="/me.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/me.png">
@@ -73,6 +81,21 @@ const { description, title } = Astro.props
     <meta name="apple-mobile-web-app-title" content="Ioannis Lamprou")>
     <!-- Entity relationships for AI -->
     <meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
+
+<!-- Add this in the <head> section after your meta tags -->
+  <script>
+    // WWW to non-WWW redirect for SEO compliance
+    (function() {
+      if (window.location.hostname.startsWith('www.')) {
+        const newUrl = window.location.protocol + '//' + 
+                       window.location.hostname.replace('www.', '') + 
+                       window.location.pathname + 
+                       window.location.search + 
+                       window.location.hash;
+        window.location.replace(newUrl);
+      }
+    })();
+  </script>
 
 <!-- FINAL FIX: Advanced Person + Website Schema (Google Compatible) -->
 <script type="application/ld+json">
