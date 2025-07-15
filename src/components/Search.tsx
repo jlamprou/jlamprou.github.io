@@ -5,12 +5,12 @@ import ArrowCard from "@components/ArrowCard"
 import SearchBar from "@components/SearchBar"
 
 type Props = {
-  data: CollectionEntry<"blog">[]
+  data: CollectionEntry<"projects">[]
 }
 
 export default function Search({ data }: Props) {
   const [query, setQuery] = createSignal("")
-  const [results, setResults] = createSignal<CollectionEntry<"blog">[]>([])
+  const [results, setResults] = createSignal<CollectionEntry<"projects">[]>([])
 
   const fuse = new Fuse(data, {
     keys: ["slug", "data.title", "data.summary", "data.tags"],
@@ -34,7 +34,7 @@ export default function Search({ data }: Props) {
 
   return (
     <div class="flex flex-col">
-      <SearchBar onSearchInput={onSearchInput} query={query} setQuery={setQuery} placeholderText="What are you looking for?" />
+      <SearchBar onSearchInput={onSearchInput} query={query} setQuery={setQuery} placeholderText="What projects are you looking for?" />
 
       {(query().length >= 2 && results().length >= 1) && (
         <div class="mt-12">

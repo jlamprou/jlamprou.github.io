@@ -8,18 +8,16 @@ import SearchBar from "@components/SearchBar"
 type Props = {
   entry_name: string
   tags: string[]
-  data: CollectionEntry<"blog">[] | CollectionEntry<'projects'>[]
+  data: CollectionEntry<"projects">[]
 }
 
 export default function SearchCollection({ entry_name, data, tags }: Props) {
-  const coerced = data.map((entry) => entry as CollectionEntry<'blog'>);
-
   const [query, setQuery] = createSignal("");
   const [filter, setFilter] = createSignal(new Set<string>())
-  const [collection, setCollection] = createSignal<CollectionEntry<'blog'>[]>([])
+  const [collection, setCollection] = createSignal<CollectionEntry<"projects">[]>([])
   const [descending, setDescending] = createSignal(false);
 
-  const fuse = new Fuse(coerced, {
+  const fuse = new Fuse(data, {
     keys: ["slug", "data.title", "data.summary", "data.tags"],
     includeMatches: true,
     minMatchCharLength: 2,
@@ -28,7 +26,7 @@ export default function SearchCollection({ entry_name, data, tags }: Props) {
 
   createEffect(() => {
     const filtered = (query().length < 2
-      ? coerced
+      ? data
       : fuse.search(query()).map((result) => result.item)
     ).filter((entry) =>
       Array.from(filter()).every((value) =>
