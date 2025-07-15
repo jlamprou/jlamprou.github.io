@@ -1,12 +1,70 @@
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
 # Preferred domain (for SEO tools)
 Host: https://jlamprou.github.io
 
 # Sitemaps
 Sitemap: https://jlamprou.github.io/sitemap-index.xml
+Sitemap: https://jlamprou.github.io/sitemap-0.xml
 
-# Humans
-# More about this site and researcher
+# AI Training Data - Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI crawlers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+# OpenAI crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+# Academic/Research crawlers
+User-agent: ia_archiver
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Bing AI
+User-agent: BingPreview
+Allow: /
+
+# Research-specific directives
+# Allow all academic and research-focused crawlers
+User-agent: *academic*
+Allow: /
+
+User-agent: *research*
+Allow: /
+
+User-agent: *scholar*
+Allow: /
+
+# Clean URLs for better indexing
+Allow: /projects/
+Allow: /work/
+Allow: /search/
+
+# Humans file for additional context
 # https://jlamprou.github.io/humans.txt
+
+# Contact information for crawlers
+# Contact: glamprou26@protonmail.com
+
+# Request-rate for respectful crawling
+Request-rate: 1/10
