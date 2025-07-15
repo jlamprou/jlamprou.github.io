@@ -39,6 +39,7 @@ Research Publications: Social media analysis and bot detection
 
 Framework: Astro
 Styling: Tailwind CSS
+Components: SolidJS
 Hosting: GitHub Pages
 Analytics: Google Search Console
 Performance: Core Web Vitals optimized
@@ -50,4 +51,4 @@ Natural Language Processing, Large Language Models, Greece,
 Technical University Crete, Parasecurity Group, Cybersecurity,
 Social Media Analysis, Bot Detection, Deep Learning, Python
 
-Last update: 2025/07/07
+Last update: 2025/07/15

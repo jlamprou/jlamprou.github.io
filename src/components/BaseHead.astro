@@ -1,0 +1,299 @@
+---
+import { ViewTransitions } from "astro:transitions"
+
+interface Props {
+  title: string
+  description: string
+  image?: string
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const { title, description, image = "/me.png" } = Astro.props
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Enhanced Keywords for AI Researcher -->
+<meta name="keywords" content="Ioannis Lamprou, John Lamprou, AI researcher, Machine Learning, NLP, Large Language Models, artificial intelligence researcher, deep learning engineer, neural network developer, Greece, Technical University of Crete, Parasecurity Group, Cybersecurity, Bot Detection, Social Media Analysis, Python, PyTorch, Transformers" />
+<meta name="author" content="Ioannis Lamprou" />
+
+<!-- Geographic targeting -->
+<meta name="geo.region" content="GR" />
+<meta name="geo.placename" content="Greece" />
+
+<link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin>
+
+<!-- Performance optimization -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="//github.com">
+<link rel="dns-prefetch" href="//linkedin.com">
+<link rel="dns-prefetch" href="//parasecurity.edu.gr">
+<link rel="preload" href="/me.png" as="image" type="image/png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="article:author" content="Ioannis Lamprou" />
+<meta property="profile:first_name" content="Ioannis" />
+<meta property="profile:last_name" content="Lamprou" />
+<meta property="profile:username" content="jlamprou" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- SEO: Indicate preferred domain version -->
+<meta property="og:url" content="https://jlamprou.github.io/" />
+<meta property="twitter:url" content="https://jlamprou.github.io/" />
+
+<!-- Tell crawlers about domain preference -->
+<meta name="robots" content="index, follow" />
+<link rel="alternate" href="https://jlamprou.github.io/" hreflang="en" />
+<meta name="canonical" content="https://jlamprou.github.io/" />
+
+<!-- Help SEO tools understand preferred URL structure -->
+<meta property="al:web:url" content="https://jlamprou.github.io/" />
+
+<!-- Mobile touch icons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/me.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/me.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/me.png">
+<meta name="msapplication-TileColor" content="#1f2937">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Mobile optimization -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Ioannis Lamprou">
+
+<!-- Entity relationships for AI -->
+<meta name="relationships" content="Ioannis Lamprou works at Technical University of Crete, researches Large Language Models, lives in Greece, specializes in Machine Learning and Natural Language Processing" />
+
+<!-- Advanced Person + Website Schema (Google Compatible) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jlamprou.github.io/#ioannis-lamprou",
+        "name": "Ioannis Lamprou",
+        "alternateName": ["John Lamprou", "Giannis Lamprou", "I. Lamprou", "J. Lamprou"],
+        "givenName": "Ioannis",
+        "familyName": "Lamprou",
+        "gender": "Male",
+        "nationality": "Greek",
+        "jobTitle": "AI researcher",
+        "description": "AI researcher and MSc Candidate specializing in Large Language Models, Natural Language Processing and Artificial Intelligence at Technical University of Crete",
+        "url": "https://jlamprou.github.io",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://jlamprou.github.io",
+          "lastReviewed": "2025-07-15T12:00:00+00:00"
+        },
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://jlamprou.github.io/me.png",
+          "caption": "Ioannis (John) Lamprou - AI researcher",
+          "width": 400,
+          "height": 400
+        },
+        "email": "glamprou26@protonmail.com",
+        "knowsAbout": [
+          "Large Language Models",
+          "Natural Language Processing", 
+          "Machine Learning", 
+          "AI Research",
+          "Python Programming",
+          "Deep Learning",
+          "Neural Networks",
+          "Cybersecurity",
+          "Bot Detection",
+          "Social Media Analysis",
+          "Mixture-of-Experts architectures",
+          "Retentive Networks"
+        ],
+        "hasOccupation": {
+          "@type": "Occupation",
+          "name": "AI research engineer",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "lastReviewed": "2025-07-15T12:00:00+00:00"
+          },
+          "description": "Developing Large Language Models and AI for cybersecurity applications",
+          "occupationLocation": [
+            {
+              "@type": "Country",
+              "name": "Greece"
+            }
+          ],
+          "skills": "Machine Learning, Natural Language Processing, Python, Deep Learning, Large Language Models, PyTorch, Transformers"
+        },
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://parasecurity.edu.gr",
+          "name": "Parasecurity Group",
+          "parentOrganization": {
+            "@type": "CollegeOrUniversity",
+            "name": "Technical University of Crete",
+            "location": "Greece"
+          }
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Technical University of Crete",
+          "location": "Greece"
+        },
+        "homeLocation": {
+          "@type": "Place",
+          "name": "Greece"
+        },
+        "workLocation": {
+          "@type": "Place",
+          "name": "Greece"
+        },
+        "memberOf": [
+          {
+            "@type": "Organization",
+            "name": "Parasecurity Research Group"
+          },
+          {
+            "@type": "Organization", 
+            "name": "Technical University of Crete"
+          }
+        ],
+        "sameAs": [
+          "https://linkedin.com/in/ioannis-lamprou-478b1b223/",
+          "https://github.com/jlamprou"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jlamprou.github.io/#website",
+        "url": "https://jlamprou.github.io",
+        "name": "Ioannis (John) Lamprou - AI Researcher Portfolio",
+        "description": "Personal website and portfolio of Ioannis (John) Lamprou, AI researcher specializing in Machine Learning and NLP at Technical University of Crete",
+        "publisher": {
+          "@id": "https://jlamprou.github.io/#ioannis-lamprou"
+        }
+      }
+    ]
+  }
+</script>
+
+<!-- FAQ Schema for Voice Search -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Ioannis Lamprou?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ioannis Lamprou (also known as John Lamprou) is an AI researcher and MSc Candidate at Technical University of Crete in Greece, specializing in Machine Learning, Natural Language Processing, and Large Language Models. He works at the Parasecurity Group and has published research on social media analysis, bot detection, and AI for cybersecurity."
+        }
+      },
+      {
+        "@type": "Question", 
+        "name": "What does Ioannis Lamprou research?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ioannis Lamprou's research focuses on Large Language Models (LLMs), Natural Language Processing, AI for cybersecurity, Twitter bot detection, social media analysis, and advanced neural network architectures. His current thesis work involves Retentive Networks for malicious code detection."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does John Lamprou work?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "John Lamprou works as an AI researcher at the Parasecurity Group, which is part of the Technical University of Crete in Greece. He previously worked as a Research Fellow at ICS-FORTH."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What programming languages does Ioannis Lamprou use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ioannis Lamprou is proficient in Python programming, PyTorch, Transformers, and various machine learning frameworks. He specializes in deep learning, neural networks, and AI model development using modern ML libraries."
+        }
+      }
+    ]
+  }
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Ioannis Lamprou",
+        "item": "https://jlamprou.github.io"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2, 
+        "name": "AI Research Engineer",
+        "item": "https://jlamprou.github.io/work"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Technical University of Crete", 
+        "item": "https://jlamprou.github.io/work"
+      }
+    ]
+  }
+</script>
+
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title={title} href={`${Astro.site}rss.xml`}/>
+
+<!-- Global Scripts -->
+<script is:inline src="/js/theme.js"></script>
+<script is:inline src="/js/scroll.js"></script>
+<script is:inline src="/js/animate.js"></script>
+<script defer is:inline src="/js/copy.js"></script>
+
+<!-- <ViewTransitions  /> -->
+
+<script>
+  import type { TransitionBeforeSwapEvent } from "astro:transitions/client"
+  document.addEventListener("astro:before-swap", (e) =>
+    [
+      ...(e as TransitionBeforeSwapEvent).newDocument.head.querySelectorAll(
+        "link[as=\"font\"]"
+      ),
+    ].forEach((link) => link.remove())
+  )
+</script>

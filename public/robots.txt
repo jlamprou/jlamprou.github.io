@@ -5,7 +5,7 @@ Allow: /
 Host: https://jlamprou.github.io
 
 # Sitemaps
-Sitemap: https://jlamprou.github.io/sitemap.xml
+Sitemap: https://jlamprou.github.io/sitemap-index.xml
 
 # Humans
 # More about this site and researcher
