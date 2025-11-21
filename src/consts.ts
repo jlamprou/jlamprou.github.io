@@ -3,7 +3,7 @@ import type { Site, Page, Links, Socials } from "@types"
 // Global
 export const SITE: Site = {
   TITLE: "Ioannis Lamprou",
-  DESCRIPTION: "AI researcher and MSc Candidate specializing in Large Language Models, Natural Language Processing and Machine Learning at Technical University of Crete, Greece.",
+  DESCRIPTION: "AI researcher specializing in Large Language Models, Natural Language Processing and Machine Learning at Technical University of Crete, Greece.",
   AUTHOR: "Ioannis Lamprou",
 }
 
@@ -27,35 +27,35 @@ export const SEARCH: Page = {
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Home",
+    HREF: "/",
   },
-  { 
-    TEXT: "Experience", 
-    HREF: "/work", 
+  {
+    TEXT: "Experience",
+    HREF: "/work",
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Projects",
+    HREF: "/projects",
   },
 ]
 
 // Socials
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "Email",
-    ICON: "email", 
+    ICON: "email",
     TEXT: "glamprou26@protonmail.com",
     HREF: "mailto:glamprou26@protonmail.com",
   },
-  { 
+  {
     NAME: "GitHub",
     ICON: "github",
     TEXT: "jlamprou",
     HREF: "https://github.com/jlamprou"
   },
-  { 
+  {
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "ioannis-lamprou",
